@@ -1,4 +1,4 @@
-# 위클리챌린지 - 4주차
+# 로또의 최고순위와 최저순위
 def solution(numbers, hand):
     answer = ''
     rHand = 12
