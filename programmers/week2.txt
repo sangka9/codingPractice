@@ -1,0 +1,45 @@
+def solution(scores):
+    answer = ''
+    sLen = len(scores)
+    grade = "FFFFFDDCBAA"
+    iMax = -1
+    iMin = 101
+    
+    board = [[0]*sLen for i in range(sLen)]
+    isUnique = [0 for i in range(sLen)]
+    avg = [0.0 for i in range(sLen)]
+    
+    for i in range(sLen) : # 대각 기준 행렬값 뒤집기
+        for j in range(sLen) :
+            board[i][j] = scores[j][i]
+
+    for i in range(sLen) :
+        iMax = max(board[i])
+        iMin = min(board[i])
+        
+        if(iMax == board[i][i]): # 최대값이 내가 준 점수인지 확인
+            for j in range(sLen) :
+                if(i != j) and (iMax == board[i][j]) :
+                    isUnique[i] = 0
+                    break
+                else :
+                    isUnique[i] = 1
+                    
+        if(iMin == board[i][i]): # 최소값이 내가 준 점수인지 확인
+            for j in range(sLen) :
+                if(i != j) and (iMin == board[i][j]) :
+                    isUnique[i] = 0
+                    break
+                else :
+                    isUnique[i] = 1
+
+    for i in range(sLen) : # 유일성 제외 평균값 계산
+        if(isUnique[i]): # 유일성 있는 경우
+            board[i][i] = 0
+            avg[i] = sum(board[i], 0.0) / (sLen - 1)
+            answer = answer + grade[int(avg[i]/10)]
+        else: # 유일성 없는 경우
+            avg[i] = sum(board[i], 0.0) / (sLen + 0) 
+            answer = answer + grade[int(avg[i]/10)]
+
+    return answer
