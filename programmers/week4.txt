@@ -1,0 +1,33 @@
+def solution(table, languages, preference):
+    answer = ''
+    table_slice = []
+    sum = [0 for i in range(len(table))]
+
+    for i in range(len(table)) :
+        table_slice.append(table[i].split())
+
+    for x in range(len(table_slice)) :
+        for y in range(len(table_slice[x])) :
+            # print(table_slice[x][y]) len(table_slice[x] - y = 점수
+            for z in range(len(languages)) :
+                if(languages[z] == table_slice[x][y]) :
+                    sum[x] += int(preference[z]) * (len(table_slice[x]) - y)
+
+
+    print(sum)
+
+    m = max(sum)
+    max_of_max = [123 for i in range(len(sum))]
+
+    for i in range(len(sum)) :
+        if(m == sum[i]) :
+            first_str = table_slice[i][0]
+            # print(first_str[0])
+            max_of_max[i] = ord(first_str[0])
+
+    # print(max_of_max)
+
+    print(table_slice[max_of_max.index(min(max_of_max))][0])
+    answer = table_slice[max_of_max.index(min(max_of_max))][0]
+
+    return answer
