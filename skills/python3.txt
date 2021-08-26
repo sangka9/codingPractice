@@ -1,0 +1,25 @@
+set(리스트 자료형) - 중복 제거
+
+max(리스트 자료형) - 리스트 중 최대값(숫자, 문자 가능)
+max(a,b) 가능
+min(리스트 자료형) - 리스트 중 최소값
+min(a,b) 가능
+sum(리스트 자료형) - 합
+sum(리스트 자료형,시작인덱스지정) - 지정합
+
+(한개 원소) in 리스트 - 리스트 안에 한개원소를 찾고 싶을 때
+not in 도 가능
+
+list - c++ 배열과 비슷, 동적할당 필요x
+list.append(요소) - 요소 추가
+list.del(list[i]) - i 번째 요소 제거
+
+list.sort() - 정렬
+list.append(값) - 값을 리스트 맨 뒤에 추가
+list.index(값) - 값이 있으면 인덱스 위치 알려줌
+list.remove(값) - 값 제거
+list.insert(a, b) - a번째 인덱스에 b요소 추가
+list.pop() - 리스트 맨 뒤의 값 반환하면서 제거
+list.extend(x) - x는 리스트만 가능 리스트 이어 붙이기
+
+list = [0 for in range(10)] - 10개 원소를 가진 리스트를 0으로 초기화 
