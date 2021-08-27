@@ -1,0 +1,19 @@
+def solution(dartResult):
+    answer = 0
+    tmp = 0
+    
+    for i in range(len(dartResult)) :
+        if(dartResult[i] == 'S') :
+            answer += tmp
+        elif(dartResult[i] == 'D') :
+            answer += tmp**2
+        elif(dartResult[i] == 'T') :
+            answer += tmp**3
+        elif(dartResult[i] == '*') :
+            
+        elif(dartResult[i] == '#') :
+        
+        else :
+            tmp = int(dartResult[i])
+    
+    return answer
