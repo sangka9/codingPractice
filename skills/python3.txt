@@ -31,3 +31,7 @@ print(f'하하하 {answer}') - string 과 정수형 변수를 같이 쓸 때, {�
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 for i in range(len(numbers)) :
     list = list.replace(numbers[i], f"{i}") # 문자열 치환
+
+# new_id 는 문자열, tmp_id 는 리스트
+tmp_id = list(new_id) # 문자열을 리스트로 변경
+new_id = "".join(tmp_id) #리스트를 문자열로 변경 연결은 "" 현재 공백기준으로 연결
