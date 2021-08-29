@@ -14,6 +14,12 @@ def solution(N, stages):
             failure.append(0)
         tmp += counting[i]
         
-    print(failure)
+    n = len(failure)
+    
+    while(n) :
+        m = failure.index(max(failure))
+        answer.append(m+1)
+        failure[m] = -1
+        n = n - 1
     
     return answer
