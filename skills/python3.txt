@@ -26,3 +26,8 @@ list.count(a) - a의 갯수 반환
 list = [0 for in range(10)] - 10개 원소를 가진 리스트를 0으로 초기화 
 
 print(f'하하하 {answer}') - string 과 정수형 변수를 같이 쓸 때, {정수형 변수}
+
+# 영어로 된 문자열 숫자 문자열로 치환
+numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+for i in range(len(numbers)) :
+    list = list.replace(numbers[i], f"{i}") # 문자열 치환
