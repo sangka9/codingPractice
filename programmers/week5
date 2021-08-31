@@ -1,0 +1,20 @@
+# 위클리챌린지 5주차
+def solution(word):
+    answer = 0
+
+    low = [781,156,31,6,1]
+
+    wo = list(word)
+    for i in range(len(wo)) :
+        if(wo[i]=='A'):
+            answer = answer + 1
+        elif(wo[i]=='E'):
+            answer = answer + low[i]*1 + 1
+        elif(wo[i]=='I'):
+            answer = answer + low[i]*2 + 1
+        elif(wo[i]=='O'):
+            answer = answer + low[i]*3 + 1
+        elif(wo[i]=='U'):
+            answer = answer + low[i]*4 + 1
+
+    return answer
