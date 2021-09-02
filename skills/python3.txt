@@ -36,9 +36,8 @@ for i in range(len(numbers)) :
 tmp_id = list(new_id) # 문자열을 리스트로 변경
 new_id = "".join(tmp_id) #리스트를 문자열로 변경 연결은 "" 현재 공백기준으로 연결
 
-list.lower - 대문자를 소문자로 바꾸는 함수
-list.upper - 소문자를 대문자로 바꾸는 함수
-list.islower - 리스트가 전부 대문자인지 확인
-list.isupper - 리스트가 전부 소문자인지 확인
-
+list.lower() - 대문자를 소문자로 바꾸는 함수
+list.upper() - 소문자를 대문자로 바꾸는 함수
+list.islower() - 리스트가 전부 대문자인지 확인
+list.isupper() - 리스트가 전부 소문자인지 확인
 
