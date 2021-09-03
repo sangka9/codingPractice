@@ -41,3 +41,20 @@ list.upper() - 소문자를 대문자로 바꾸는 함수
 list.islower() - 리스트가 전부 대문자인지 확인
 list.isupper() - 리스트가 전부 소문자인지 확인
 
+# 딕셔너리 자료형이 리스트 자료형보다 in 으로 search 하는 경우 딕셔너리 자료형이 O(n)으로 속도면에서 가장 효율적이다.
+dic = {} - 딕셔너리 자료형 선언
+dic.values() - 딕셔너리 모든 value 값 불러오기
+dic.keys() - 딕셔너리 모든 key 값 불러오기
+dic.items() - 딕셔너리 모든 key, value 값 불러오기
+
+#key 값 하나씩 불러오기
+for key in dic:
+     print(key)
+     
+#value 값 하나씩 불러오기
+for val in dic.values():
+     print(val)
+     
+#key, value 값 쌍으로 하나씩 불러오기
+for key, val in dic.items():
+     print("key = {key}, value={value}".format(key=key,value=val))
