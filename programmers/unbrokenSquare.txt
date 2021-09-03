@@ -1,0 +1,10 @@
+# Summer/Winter Coding(2019) - 멀쩡한 사각형
+
+import math
+
+def solution(w,h):
+    answer = 1
+    
+    answer = (w * h) - (w + h - math.gcd(w,h))
+    
+    return answer
