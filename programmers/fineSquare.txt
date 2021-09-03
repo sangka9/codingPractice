@@ -1,4 +1,4 @@
-# Summer/Winter Coding(2019) - 멀쩡한 사각형
+# Summer/Winter Coding(2019) - 멀쩡한 사각형 * 수학적 패턴을 알아내기 어려웠던 문제
 
 import math
 
