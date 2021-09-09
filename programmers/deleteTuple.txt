@@ -1,36 +1,17 @@
 # 2017 팁스타운 - 짝지어 제거하기
 def solution(s):
     answer = 1
-    front = []
-    back = list(s)
+    st = []
     
-    sp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    count = [0 for i in range(26)]
-    
-    if(len(back) % 2 != 0) :
-        return 0
-    
-    for i in range(26):
-        count[i] = back.count(sp[i])
-    
-    for i in range(26):
-        if(count[i] % 2 != 0):
-            return 0
-    
-    while(1):
-        if(len(front) == 0) and (len(back) == 0) :
-            answer = 1
-            break
-        elif(len(front) > 0) and (len(back) == 0) :
-            answer = 0
-            break
-        elif(len(front) == 0) and (len(back) > 0) :
-            front.append(back.pop(0))
-        else :
-            if(front[-1] == back[0]):
-                front.pop(-1)
-                back.pop(0)
-            else:
-                front.append(back.pop(0))
-    
+    for i in s:
+        if(len(st) > 0) and st[-1] == i:
+            st.pop()
+        else:
+            st.append(i)
+        
+    if(len(st) == 0):
+        answer = 1
+    else :
+        answer = 0
+        
     return answer
