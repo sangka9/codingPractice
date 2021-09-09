@@ -23,7 +23,10 @@ list.pop() - 리스트 맨 뒤의 값 반환하면서 제거
 list.extend(x) - x는 리스트만 가능 리스트 이어 붙이기
 list.count(a) - a의 갯수 반환
 
-list = [0 for in range(10)] - 10개 원소를 가진 리스트를 0으로 초기화 
+list = [0 for in range(10)] - 10개 원소를 가진 리스트를 0으로 초기화
+# 파이썬에서 H x W 2차원 리스트를 0으로 초기화
+arr = [[0 for i in range(w)] for j in range(h)]
+arr = [[0]*w for j in range(h)]
 
 print(f'하하하 {answer}') - string 과 정수형 변수를 같이 쓸 때, {정수형 변수}
 
