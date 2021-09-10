@@ -1,0 +1,30 @@
+# 위클리 챌린지 6주차 - 복서 정렬하기
+def solution(weights, head2head):
+    answer = []
+    wins = []
+    loses = []
+    numberOfBoxers = len(weights)
+    wWins = [0 for i in range(numberOfBoxers)]
+    boxers = []
+    
+    for i in range(numberOfBoxers) : 
+        wins.append(head2head[i].count('W'))
+        loses.append(head2head[i].count('L'))
+        
+        if(wins[i] != 0) :
+            wins[i] = wins[i] / (wins[i] + loses[i])
+        
+        for j in range(i):
+            if(head2head[i][j] == 'W') and (weights[i] < weights[j]) :
+                wWins[i] += 1
+            elif(head2head[i][j] == 'L') and (weights[i] > weights[j]) :
+                wWins[j] += 1
+                
+    for i in range(numberOfBoxers) :
+        boxers.insert(len(boxers),(wins[i], wWins[i], weights[i], i+1))
+        
+    boxersSet = sorted(boxers, key = lambda x:(x[0],x[1],x[2],-x[3]), reverse = True)
+    
+    answer = [i[3] for i in boxersSet]
+    
+    return answer
