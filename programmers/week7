@@ -1,0 +1,29 @@
+# 위클리 챌린지 7주차 - 입실 퇴실
+def solution(enter, leave):
+    answer = []
+    straight = [[] for i in range(len(enter))]
+    dot = [[] for i in range(len(enter))]
+    
+    
+    for i in range(len(enter)) :
+        startIndex = i
+        endIndex = leave.index(enter[i])
+        #straight[i].append(i)
+        #straight[i].append(leave.index(enter[i]))
+        
+        if(startIndex <= endIndex) :
+            for j in range(startIndex,endIndex+1) :
+                straight[i].append(j)
+        else :
+            for j in range(startIndex,endIndex-1,-1) :
+                straight[i].append(j)
+    
+    
+    for i in range(len(enter)) :
+        # print(straight[i])
+        for j in range(len(enter)) :
+            if(i != j) :
+                same = list(set(straight[i]) & set(straight[j]))
+                print(same)
+        
+    return answer
