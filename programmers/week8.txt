@@ -1,0 +1,16 @@
+#위클리 챌린지 - 8주차 - 최소직사각형
+def solution(sizes):
+    answer = 0
+    maxX = 0
+    maxH = 0
+    
+    for i in range(len(sizes)) :
+        sizes[i].sort()
+        if(maxX < sizes[i][0]) :
+            maxX = sizes[i][0]
+        if(maxH < sizes[i][1]) :
+            maxH = sizes[i][1]
+    
+    answer = maxX * maxH
+    
+    return answer
