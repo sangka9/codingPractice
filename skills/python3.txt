@@ -76,3 +76,10 @@ boxers.sort(key = lambda x:(x[0],x[1],x[2],-x[3]), reverse = True)
 answer = [x[0] for x in a] 
 # 각 튜플의 첫번째 element만 list 형태로 추출 
 [1, 22, 53, 44, 1]
+
+#리스트 int형으로 변환
+저장할리스트 = list(map(int, 리스트명))
+
+#문자열에서 숫자만 리스트로 저장
+import re
+저장할리스트명 = re.findall(r'\d+', 문자열)
