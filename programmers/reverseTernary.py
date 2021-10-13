@@ -1,5 +1,4 @@
 # 월간 코드 챌린지 시즌1 - 3진법 뒤집기
-
 def solution(n):
     answer = 0
     ternary = []
