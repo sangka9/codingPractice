@@ -1,4 +1,4 @@
-# 로또의 최고순위와 최저순위
+#2020 카카오 인턴십 - 키패드 누르기
 def solution(numbers, hand):
     answer = ''
     rHand = 12
