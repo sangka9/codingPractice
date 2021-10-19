@@ -1,4 +1,4 @@
-# 로또의 최고순위와 최저순위
+# 2021 Dev-Matching: 웹 백엔드 개발자(상반기) - 로또의 최고 순위와 최저 순위
 def solution(lottos, win_nums):
     answer = []
     count = 0
