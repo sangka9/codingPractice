@@ -22,7 +22,8 @@ def solution(progresses, speeds):
             
     return answer
   
-  # 2번 풀이 O(n) = n
+  # 2번 풀이 O(n) = n 
+  # 음수 반올림 -((progresses[i] - 100) // speeds[i])
   def solution(progresses, speeds):
     answer = []
     day = []
