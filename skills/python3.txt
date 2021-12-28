@@ -86,3 +86,14 @@ import re
 
 # 음수 반올림, 음수는 몫이 자동으로 내림이 됨. 음수의 반 내림은 양수에서 올림과 같음
 -((p - 100) // s)
+
+#유클리드 호제법
+#최대공약수 구하기
+def GCD(x,y) :
+    while y : #y가 참인 동안 = 자연수일때 = a%b != 0
+        x,y = y, x%y
+    return x
+  
+#최소공배수 구하기
+def LCM(a,b) :
+    return (a*b)//GCD(a,b)
