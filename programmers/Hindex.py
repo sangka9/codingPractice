@@ -4,7 +4,7 @@ def solution(citations):
     citations.sort()
     
     for i in range(len(citations)) :
-        if len(citations) - i <= citations[i] and i <= citations[i] :
+        if len(citations) - i <= citations[i] :
             answer = len(citations) - i
             break
     
