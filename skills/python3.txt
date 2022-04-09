@@ -32,8 +32,9 @@ print(f'하하하 {answer}') - string 과 정수형 변수를 같이 쓸 때, {�
 
 # 영어로 된 문자열 숫자 문자열로 치환
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+string = "0123456789"
 for i in range(len(numbers)) :
-    list = list.replace(numbers[i], f"{i}") # 문자열 치환
+    string = string.replace(f'{i}', numbers[i]) # 문자열 치환 replace(바꾸고 싶은 문자열, 바꾸는 문자열)
 
 # new_id 는 문자열, tmp_id 는 리스트
 tmp_id = list(new_id) # 문자열을 리스트로 변경
