@@ -1,4 +1,5 @@
 # array - find-minimum-in-rotated-sorted-array - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/submissions/
+# binary search / 조건은 정렬이 되었는 경우
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         if len(nums) < 1 :
