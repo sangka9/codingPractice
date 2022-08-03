@@ -13,6 +13,7 @@ class Solution:
       
       
  # 다른 풀이 - 비트 연산자를 이용하여 풀기
+# https://leetcode.com/problems/reverse-bits/discuss/732138/Python-O(32)-simple-solution-explained 참고
 """
 class Solution:
     def reverseBits(self, n: int) -> int:
