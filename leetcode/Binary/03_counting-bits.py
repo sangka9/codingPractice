@@ -22,3 +22,16 @@ class Solution:
                     index += 1
         
         return cnt
+    
+
+# 다른 풀이
+"""
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        cnt = [0]
+        
+        for i in range(1,n+1) :
+            cnt.append(cnt[i&(i-1)]+1) # 비트연산자를 이용하여 구하기
+        
+        return cnt
+"""
