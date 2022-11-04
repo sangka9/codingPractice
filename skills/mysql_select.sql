@@ -71,3 +71,25 @@ GROUP BY USER_ID, PRODUCT_ID -- 구분을 두개로 해야하기 때문에 구�
 HAVING COUNT(*) > 1 -- 구룹화 한것 중에 카운팅, 재구매한 데이터를 구하기 위함
 ORDER BY USER_ID ASC, PRODUCT_ID DESC -- 정렬
 
+-- 첫번째 정답 https://school.programmers.co.kr/learn/courses/30/lessons/131537
+SELECT DATE_FORMAT(OS.SALES_DATE,'%Y-%m-%d') AS SALES_DATE, 
+       OS.PRODUCT_ID,
+       OS.USER_ID,
+       OS.SALES_AMOUNT
+FROM (
+    SELECT ONLINE_SALE_ID, USER_ID, PRODUCT_ID, SALES_AMOUNT, SALES_DATE FROM ONLINE_SALE
+    UNION ALL -- 중복 데이터도 추가, UNION 중복 데이터 삭제
+    SELECT OFFLINE_SALE_ID, NULL, PRODUCT_ID, SALES_AMOUNT, SALES_DATE FROM OFFLINE_SALE
+) OS
+WHERE YEAR(OS.SALES_DATE) = 2022 AND MONTH(OS.SALES_DATE) = 3
+ORDER BY OS.SALES_DATE, OS.PRODUCT_ID, OS.USER_ID
+
+-- 두번째 정답
+SELECT date_format(sales_date, "%Y-%m-%d") as sales_date, product_id, user_id, sales_amount
+from online_sale
+where sales_date like '2022-03%'
+union
+select date_format(sales_date, "%Y-%m-%d") as sales_date, product_id, NULL as user_id, sales_amount
+from offline_sale
+where sales_date like '2022-03%'
+order by sales_date asc, product_id asc, user_id asc;
