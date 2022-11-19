@@ -8,8 +8,10 @@ class Solution:
         res = [0 for i in range(len(nums))]
 
         for i in range(len(nums)) :
-            if i < 1 :
+            if i == 0 :
                 res[i] = nums[i]
+            elif i == 1 :
+                res[i] = max(nums[i],nums[i-1])
             else :
                 res[i] = max(res[i-2]+nums[i],res[i-1])
 
