@@ -7,7 +7,7 @@ for i in range(len(data)) :
         print(f'{data[i]} ',end = '')
         result += int(data[i])
     else :
-        if int(data[i-1]) < 2 : # 앞의 자리 수가 0 또는 1 일 경우 덧셈
+        if int(data[i-1]) < 2 or int(data[i]) < 2 : # 앞뒤의 자리 수가 0 또는 1 일 경우 덧셈
             print(f'+ {data[i]} ',end = '')
             result += int(data[i])
         else : # 앞의 자리 수가 0 또는 1이 아닌 경우 곱셈
