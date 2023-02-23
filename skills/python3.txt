@@ -104,3 +104,8 @@ from bisect import bisect_left, bisect_right
 # (value 찾고 싶은 숫자, iterable 찾고자 하는 리스트)
 bisect_left(literable, value) : 숫자의 왼쪽 인덱스를 구하기
 bisect_right(literable, value) : 숫자의 오른쪽 인덱스를 구하기
+
+# 소수점 자리수 표현
+from decimal import *
+getcontext().prec = 100   #소수점이하 100자리까지 설정.
+ans = Decimal(a[0])/Decimal(a[1])
